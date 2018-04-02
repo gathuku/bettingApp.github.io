@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<title>Betting App</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3mobile.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-teal.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
+
+<body>
+
+<nav class="w3-sidebar w3-bar-block w3-card" id="mySidebar">
+<div class="w3-container w3-theme-d2">
+  <span onclick="closeSidebar()" class="w3-button w3-display-topright w3-large">X</span>
+  <br>
+  <div class="w3-padding w3-center">
+    <!-- <i class="fa fa-futbol w3-circle w3-xxlarge w3-purple"></i> -->
+    <img class="w3-circle" src="img/footbal.jpg" alt="football" style="width:150px; height:150px">
+  </div>
+</div>
+<a class="w3-bar-item w3-button" href="#"><i class="fa fa-home"></i> Home</a>
+<a class="w3-bar-item w3-button" href="#"><i class="fa fa-life-ring"></i> Live Games</a>
+<a class="w3-bar-item w3-button" href="#"><i class="fa fa-home"></i> Jackpots</a>
+<a class="w3-bar-item w3-button" href="#"><i class="fa fa-chart-bar"></i> Statistics</a>
+<a class="w3-bar-item w3-button" href="#"><i class="fa fa-book"></i> Results</a>
+<a class="w3-bar-item w3-button" href="#"><i class="fa fa-tv"></i> News</a>
+</nav>
+
+<header class="w3-top w3-bar w3-theme">
+  <button class="w3-bar-item w3-button w3-xxxlarge w3-hover-theme" onclick="openSidebar()">&#9776;</button>
+  <h1 class="w3-bar-item">Betting App</h1>
+</header>
+
+<div class="w3-container" style="margin-top:90px">
+<hr>
+<div class="w3-cell-row">
+  <div class="w3-cell" style="width:30%">
+    <img class="w3-circle" src="img/player1.svg" style="width:100%">
+  </div>
+  <div class="w3-cell w3-container">
+    <h3>Football</h3>
+    <p>Football from all the countries</p>
+  </div>
+</div>  
+<hr>
+<div class="w3-cell-row">
+  <div class="w3-cell" style="width:30%">
+    <img class="w3-circle" src="img/player2.svg" style="width:100%">
+  </div>
+  <div class="w3-cell w3-container">
+    <h3>Tennis</h3>
+    <p>Tennis from all the countries</p>
+  </div>
+</div>
+<hr>
+<div class="w3-cell-row">
+  <div class="w3-cell" style="width:30%">
+    <img class="w3-circle" src="img/basketball.svg" style="width:100%">
+  </div>
+  <div class="w3-cell w3-container">
+    <h3>BasketBall</h3>
+    <p>Bascket ball from all the countries</p>
+  </div>
+</div>
+<hr>
+<div class="w3-cell-row">
+  <div class="w3-cell" style="width:30%">
+    <img class="w3-circle" src="img/american-football-player.svg" style="width:100%">
+  </div>
+  <div class="w3-cell w3-container">
+    <h3>Cricket</h3>
+    <p>Cricket from all the countries</p>
+  </div>
+</div>
+</hr>
+</div>
+
+<footer class="w3-container  w3-theme w3-margin-top">
+  <h3>Number one Betting App</h3>
+</footer>
+
+<script>
+closeSidebar();
+function openSidebar() {
+    document.getElementById("mySidebar").style.display = "block";
+}
+function closeSidebar() {
+    document.getElementById("mySidebar").style.display = "none";
+}
+</script>
+
+</body>
