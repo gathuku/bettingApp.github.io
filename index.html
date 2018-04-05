@@ -3,10 +3,11 @@
 <title>Betting App</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3mobile.css">
-<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-teal.css">
+<!-- <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-teal.css"> -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
-
+<link rel="stylesheet" href="w3css.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-red.css">
 <body>
 
 <nav class="w3-sidebar w3-bar-block w3-card" id="mySidebar">
@@ -18,7 +19,7 @@
     <img class="w3-circle" src="img/footbal.jpg" alt="football" style="width:150px; height:150px">
   </div>
 </div>
-<a class="w3-bar-item w3-button" href="#"><i class="fa fa-home"></i> Home</a>
+<a class="w3-bar-item w3-button" href="#"><i class="fa fa-home w3-text-yellow w3-large"></i> Home</a>
 <a class="w3-bar-item w3-button" href="#"><i class="fa fa-life-ring"></i> Live Games</a>
 <a class="w3-bar-item w3-button" href="#"><i class="fa fa-home"></i> Jackpots</a>
 <a class="w3-bar-item w3-button" href="#"><i class="fa fa-chart-bar"></i> Statistics</a>
@@ -26,14 +27,17 @@
 <a class="w3-bar-item w3-button" href="#"><i class="fa fa-tv"></i> News</a>
 </nav>
 
-<header class="w3-top w3-bar w3-theme">
-  <button class="w3-bar-item w3-button w3-xxxlarge w3-hover-theme" onclick="openSidebar()">&#9776;</button>
-  <h1 class="w3-bar-item">Betting App</h1>
+<header class="w3-top w3-bar w3-black">
+  <button class="w3-bar-item w3-button w3-xxlarge w3-hover-theme" onclick="openSidebar()">&#9776;</button>
+<!--   <h1 class="w3-bar-item">Betting App</h1> -->
+
+  <img class="w3-center" src="img/logo.jpg" alt="System logo" style="width:180px;height:60px">
 </header>
 
-<div class="w3-container" style="margin-top:90px">
-<hr>
-<div class="w3-cell-row">
+<!-- default division -->
+<div class="w3-container" style="margin-top:90px" id="default">
+<hr class="w3-theme-d5">
+<div class="w3-cell-row" id="football">
   <div class="w3-cell" style="width:30%">
     <img class="w3-circle" src="img/player1.svg" style="width:100%">
   </div>
@@ -42,7 +46,7 @@
     <p>Football from all the countries</p>
   </div>
 </div>  
-<hr>
+<hr class="w3-theme">
 <div class="w3-cell-row">
   <div class="w3-cell" style="width:30%">
     <img class="w3-circle" src="img/player2.svg" style="width:100%">
@@ -52,7 +56,7 @@
     <p>Tennis from all the countries</p>
   </div>
 </div>
-<hr>
+<hr class="w3-theme">
 <div class="w3-cell-row">
   <div class="w3-cell" style="width:30%">
     <img class="w3-circle" src="img/basketball.svg" style="width:100%">
@@ -75,8 +79,80 @@
 </hr>
 </div>
 
-<footer class="w3-container  w3-theme w3-margin-top">
-  <h3>Number one Betting App</h3>
+<!--  soccer odds division -->
+<div class="w3-container" style="margin-top:90px" id="soccerodds">
+  <h4 class="w3-text-red">Soccer <br> Thursday 5th April, 2018</h4>
+  <button class="w3-button w3-black w3-round" id="backbtn"><i class="fa fa-arrow-alt-circle-left"></i>Back</button>
+  <hr>
+  <div class="w3-cell-row">
+      <div class="w3-cell" style="width:30%">
+        <p>Manchester Vs Arsenal</p>
+      </div>
+      <div class="w3-cell w3-container">
+      
+        <button class="w3-button w3-yellow"> 1 <br> 2.33</button>
+        <button class="w3-button w3-yellow"> X <br> 2.33</button>
+        <button class="w3-button w3-yellow">2 <br> 2.33</button>
+        
+      </div>
+    </div>
+  <hr>
+  <div class="w3-cell-row">
+      <div class="w3-cell" style="width:30%">
+        <p>Madrid Vs Sporting CP</p>
+      </div>
+      <div class="w3-cell w3-container">
+          <button class="w3-button w3-yellow"> 1 <br> 1.32</button>
+        <button class="w3-button w3-yellow"> X <br> 5.10</button>
+        <button class="w3-button w3-yellow">2 <br> 10.25</button>
+        
+      </div>
+    </div>
+  <hr>
+  <div class="w3-cell-row">
+      <div class="w3-cell" style="width:30%">
+        <p>Arsenal vs Moscow</p>
+      </div>
+      <div class="w3-cell w3-container">
+          <button class="w3-button w3-yellow"> 1 <br> 1.34</button>
+          <button class="w3-button w3-yellow"> X <br> 4.85</button>
+          <button class="w3-button w3-yellow">2 <br> 10.25</button>
+        
+      </div>
+    </div>
+  <hr>
+  <div class="w3-cell-row">
+      <div class="w3-cell" style="width:30%">
+        <p>St. Etienne Vs PSG</p>
+      </div>
+      <div class="w3-cell w3-container">
+          <button class="w3-button w3-yellow"> 1 <br> 1.32</button>
+          <button class="w3-button w3-yellow"> X <br> 5.10</button>
+          <button class="w3-button w3-yellow">2 <br> 10.25</button>
+        
+      </div>
+    </div>
+  <hr>
+  <div class="w3-cell-row">
+      <div class="w3-cell" style="width:30%">
+        <p>Hannover  Vs Werder Bremen</p>
+      </div>
+      <div class="w3-cell w3-container">
+          <button class="w3-button w3-yellow"> 1 <br> 2.32</button>
+        <button class="w3-button w3-yellow"> X <br> 3.10</button>
+        <button class="w3-button w3-yellow">2 <br> 8.25</button>
+        
+      </div>
+    </div>
+  <hr>
+
+</div>
+
+
+<!-- footer -->
+
+<footer class="w3-container  w3-black w3-center w3-margin-top">
+    <img src="img/logo.jpg" alt="System logo" style="width:180px;height:60px">
 </footer>
 
 <script>
@@ -88,5 +164,6 @@ function closeSidebar() {
     document.getElementById("mySidebar").style.display = "none";
 }
 </script>
-
+<script src="app.js"></script>
 </body>
+</html>
