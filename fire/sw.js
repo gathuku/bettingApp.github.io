@@ -1,44 +1,79 @@
- 
-// after a service worker is installed and the user navigates to a different page or 
- // refreshes,the service worker will begin to receive fetch events
+var cacheName = 'v1';
+var cacheFiles = [
+    './',
+    './index.html',
+    './app.js',
+    './script.css',
+    './w3css.css',
+    './firebase.json',
+    './manifest.json',
+    './IMG-20171204-WA0019.jpg',
+    './https://www.w3schools.com/lib/w3-theme-red.css',
+    './http://fonts.googleapis.com/css?family=Ubuntu:400,700',
+    'sw.js'  
+]
+
+self.addEventListener('install', function(e) {
+    console.log('[ServiceWorker] Installed');
+
+    e.waitUntil(
+
+        caches.open(cacheName).then(function(cache) {
+            console.log('[ServiceWorker] Caching cacheFiles');
+            return cache.addAll(cacheFiles);
+        })
+    );
+});
+
+self.addEventListener('activate', function(e) {
+    console.log('[ServiceWorker] Activated');
     
-     self.addEventListener('fetch', function(event) {
-        event.respondWith(caches.open('cache').then(function(cache) {
-          return cache.match(event.request).then(function(response) {
-            console.log("cache request: " + event.request.url);
-             var fetchPromise = fetch(event.request).then(function(networkResponse) {           
-  // if we got a response from the cache, update the cache                   
-      console.log("fetch completed: " + event.request.url, networkResponse);
-        if (networkResponse) {
-          console.debug("updated cached page: " + event.request.url, networkResponse);
-            cache.put(event.request, networkResponse.clone());}
-              return networkResponse;
-                }, function (e) {   
-  // rejected promise - just ignore it, we're offline!   
-                console.log("Error in fetch()", e);
-                e.waitUntil(
-                caches.open('cache').then(function(cache) { // our cache here is named *cache* in the caches.open()
-                return cache.addAll
-                ([            
-  //cache.addAll(), takes a list of URLs, then fetches them from the server and adds the response to the cache.           
-  // add your entire site to the cache- as in the code below; for offline access
-  // If you have some build process for your site, perhaps that could generate the list of possible URLs that a user might load.               
-              '/', // do not remove this
-              '/index.html', //default
-              '/index.html?homescreen=1', //default
-              '/?homescreen=1', //default
-              '/assets/css/main.css',// configure as by your site ; just an example
-  // Do not replace/delete/edit the sw.js/ and manifest.js paths below
-              '/sw.js/',
-              '/manifest.js',
-  //These are links to the extenal social media buttons that should be cached; we have used twitter's as an example
-              'https://platform.twitter.com/widgets.js',       
-              ]);
-              })
-              );
-              });
-  // respond from the cache, or the network
-        return response || fetchPromise;
-      });
-      }));
-      });
+    e.waitUntil(
+
+        caches.keys().then(function(cacheNames) {
+            return Promise.all(cacheNames.map(function(thisCacheName) {
+
+                if (thisCacheName !== cacheName) {
+                    console.log('[ServiceWorker] Removing Cached Files from Cache - ', thisCacheName);
+                    return caches.delete(thisCacheName);
+                }
+            }));
+        })
+    );
+});
+
+self.addEventListener('fetch', function(e) {
+    console.log('[ServiceWorker] Fetch', e.request.url);
+
+    e.respondWith(
+        caches.match(e.request)
+            .then(function(response) {
+
+                if ( response ) {
+                    console.log("[ServiceWorker] Found in Cache", e.request.url, response);
+                    return response;
+                }
+                var requestClone = e.request.clone();
+                fetch(requestClone)
+                    .then(function(response) {
+
+                        if ( !response ) {
+                            console.log("[ServiceWorker] No response from fetch request")
+                            return response;
+                        }
+                        var responseClone = response.clone();
+
+                        caches.open(cacheName).then(function(cache) {
+
+                            cache.put(e.request, responseClone);
+                            console.log('[ServiceWorker] New Data Cached', e.request.url);
+                            return response;
+                        });
+
+                    })
+                    .catch(function(err) {
+                        console.log('[ServiceWorker] Error Fetching & Caching New Data', err);
+                    });
+            })
+    );
+})
