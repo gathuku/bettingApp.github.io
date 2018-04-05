@@ -1,0 +1,33 @@
+{
+  "background_color": "#fff",
+  "display": "standalone",
+  "orientation":"portrait",
+  "theme_color": "#fff",           
+  "short_name": "Alpha Bet",
+  "name": "PWA Fire Codelab",
+  "icons": [
+  {
+  "src": "img/kenya.svg",
+  "type": "image/svg",
+  "sizes": "48x48"
+  },
+  {
+  "src": "img/kenya.svg",
+  "type": "image/svg",
+  "sizes": "96x96"
+  },
+  {
+  "src": "img/kenya.svg",
+  "type": "image/svg",
+  "sizes": "192x192"
+  }
+  ,
+  {
+  "src": "img/kenya.svg",
+  "type": "image/svg",
+  "sizes": "512x512"
+  } 
+  ],
+
+  "start_url": "index.html?launcher=true"
+  }
