@@ -4,27 +4,27 @@
   "orientation":"portrait",
   "theme_color": "#fff",           
   "short_name": "Alpha Bet",
-  "name": "PWA Fire Codelab",
+  "name": "Alpha Betting App",
   "icons": [
   {
-  "src": "img/kenya.svg",
-  "type": "image/svg",
+  "src": "img/ttc.png",
+  "type": "image/png",
   "sizes": "48x48"
   },
   {
-  "src": "img/kenya.svg",
-  "type": "image/svg",
+  "src": "img/ttc.png",
+  "type": "image/png",
   "sizes": "96x96"
   },
   {
-  "src": "img/kenya.svg",
-  "type": "image/svg",
+  "src": "img/ttc.png",
+  "type": "image/png",
   "sizes": "192x192"
   }
   ,
   {
-  "src": "img/kenya.svg",
-  "type": "image/svg",
+  "src": "img/ttc.png",
+  "type": "image/png",
   "sizes": "512x512"
   } 
   ],
