@@ -8,8 +8,15 @@
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
 <link rel="stylesheet" href="w3css.css">
 <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-red.css">
-<link rel="manifest" href="fire/manifest.json">
+<link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
 <body>
+  <style>
+     body,h1,h2,h3,h4,h5,h6{
+      font-family: 'Comfortaa', cursive;
+    } 
+    body{font-family: 'Comfortaa', cursive;
+    }
+  </style>
 
 <nav class="w3-sidebar w3-bar-block w3-card" id="mySidebar">
 <div class="w3-container w3-theme-d2">
@@ -35,8 +42,86 @@
   <img class="w3-center" src="img/logo.jpg" alt="System logo" style="width:180px;height:60px">
 </header>
 
+
+<!-- register division -->
+<div class="w3-container" style="margin-top:90px" id="register">
+    <div class="w3-container w3-card w3-black">
+        <div class="w3-card w3-text-red w3-center">
+          <h2>Kindly Enter your details</h2>
+          <p>Thankyou for your interest in AplhaBet. Once you submit the 
+            form below you will receive a registration code. Submit the code for verication</p>
+        </div>
+        <div class="w3-white w3-padding-left" style="margin-left:20px">
+          <br>
+          <form action="" style="margin-left:20px">
+              Mobile Phone Number:
+              <input type="text" class="w3-input">
+              Password:
+              <input type="password" class="w3-input">
+              Confirm password:
+              <input type="password" class="w3-input">
+              <input type="checkbox">By checking this, I hereby confirm that av agreed to terms 
+              and conditions, that am 18 years and over.
+               <br>
+               <hr>
+              <div class="w3-center">
+                  <button id="regcancel" class="w3-button w3-round-xxlarge w3-yellow " style="border:2px solid black">Cancel</button>
+                  <button id="regsubmit" class="w3-button w3-round-xxlarge w3-yellow"  style="border:2px solid black">Submit</button>
+              </div>
+              <br>
+              
+          </form>
+         
+        </div>
+         <br>
+      </div>
+
+</div> <!-- end of register division -->
+
+
+<!-- Login division -->
+<div class="w3-container" style="margin-top:90px" id="logindiv">
+    <div class="w3-container w3-card w3-black">
+        <div class="w3-card w3-text-red w3-center">
+          <h2>Kindly Enter your details</h2>
+        
+        </div>
+        <div class="w3-white w3-padding-left" style="margin-left:20px">
+          <br>
+          <form action="" style="margin-left:20px">
+              Mobile Phone Number:
+              <input type="text" class="w3-input">
+              Password:
+              <input type="password" class="w3-input">
+             
+               <br>
+               <p>Forgot your password</p>
+               <hr>
+              <div class="w3-center">
+                  <button id="logincancel" class="w3-button w3-round-xxlarge w3-yellow " style="border:2px solid black">Cancel</button>
+                  <button id="loginsubmit"  class="w3-button w3-round-xxlarge w3-yellow"  style="border:2px solid black">Login</button>
+              </div>
+              <br>
+              
+          </form>
+         
+        </div>
+         <br>
+      </div>
+
+</div>  <!-- end of login division -->
+
+
 <!-- default division -->
+
 <div class="w3-container" style="margin-top:90px" id="default">
+    <div class="w3-bar w3-black ">
+      <div class="">
+          <button class="w3-bar-item w3-button w3-round" id="registerbtn">Register</button>
+          <button class="w3-bar-item w3-button w3-round" id="loginbtn">Login</button>
+      </div>
+       
+      </div>
 <hr class="w3-theme-d5">
 <div class="w3-cell-row" id="football">
   <div class="w3-cell" style="width:30%">
@@ -146,16 +231,100 @@
       </div>
     </div>
   <hr>
+<!--   betting slip info card -->
+  <div class="w3-container w3-card w3-black">
+    <div class="w3-card w3-text-red w3-center">
+      <h2>Betting Slip</h2>
+    </div>
+    <div class="w3-white w3-center">
+      <br>
+        <i class="fa fa-futbol w3-xxlarge"></i>
+      <h4>You have not placed any bet </h4>
+      <p>Make you first pick to start playing</p>
+    </div>
+     
+  </div>
+  <br>
+<!-- payment numbers division -->
+  <div class="w3-container w3-card w3-black">
+      <div class="w3-card w3-text-red w3-center">
+        <h2>Payment Numbers</h2>
+       <!--  <i class="fas fa-money-bill-alt w3-xxlarge"></i> -->
+      </div>
+      <div class="w3-white w3-center">
+       
+        
+       <hr>
+        <p>Safaricom</p>
+        <div class="w3-cell-row">
+          <div class="w3-cell" style="width:30%">
+              <img src="img/safaricom.png" alt="safaricom logo" style="width:80px;height:60px">
+          </div>
+          <div class="w3-cell">
+            <p>XXXXXX</p>
+          </div>
+        </div>
+        
+        <hr>
+        <p>Airtel</p>
+        <div class="w3-cell-row">
+            <div class="w3-cell" style="width:30%">
+                <img src="img/airtel.svg" alt="airtel logo" style="width:60px;height:60px">
+            </div>
+            <div class="w3-cell">
+              <p>XXXXXX</p>
+            </div>
+          </div>
+        
+      </div>
+       
+    </div>
 
+    <!--  cutomer care div -->
+    
+<div class="w3-container w3-card w3-black">
+    <div class="w3-card w3-text-red w3-center">
+      <h2>Customer Care</h2>
+    </div>
+    <div class="w3-white w3-center">
+      <br>
+     <p class="w3-center">We offer 24/7 customer care attention to our players</p>
+     <hr>
+     <p><b><i class="fa fa-phone"></i> 0705112855</b></p>
+     <hr>
+     <p><b><i class="fa fa-phone"></i> 0705112855</b></p>
+     
+    </div>
+     
+  </div>
+  <!-- about division -->
+  <div class="w3-container">
+    <br>
+      <h2 class="w3-text-red">ALPHA BET</h2>
+      <hr>
+    <div class="w3-cell-row">
+     
+      <div class="w3-cell">
+        <h4>P.O BOX XXXX NAIROBI</h4>
+        <a href=""><i class="fab fa-facebook"></i> Facebook</a><br>
+        <a href=""><i class="fab fa-twitter"></i> Twiter</a><br>
+        <a href=""><i class="fab fa-google-plus-g"></i> Google +</a><br>
+        <a href=""><i class="fab fa-youtube"></i> Youtube</a><br>
+      </div>
+    </div>
+
+  </div>
+  <!-- end of division -->
 </div>
+
+
 
 
 <!-- footer -->
 
-<footer class="w3-container  w3-black w3-center w3-margin-top">
+<footer class="w3-container w3-bottom  w3-black w3-center w3-margin-top">
     <img src="img/logo.jpg" alt="System logo" style="width:180px;height:60px">
 </footer>
-
 
 <script>
 closeSidebar();
@@ -167,18 +336,5 @@ function closeSidebar() {
 }
 </script>
 <script src="app.js"></script>
-<script>
-	
-  if ('serviceWorker' in navigator) {
-window.addEventListener('load', function() {
-navigator.serviceWorker.register('fire/sw.js')
-.then(function() { console.log("Service Worker Registered"); });
-}
-
-);
-}
-
-</script>
-<!-- <script src="sw.js"></script> -->
 </body>
 </html>
